@@ -1,0 +1,16 @@
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\bin\Debug\ChatApp.exe.config
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\bin\Debug\ChatApp.exe
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\bin\Debug\ChatApp.pdb
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatClient.csproj.AssemblyReference.cache
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\MVVM\View\MainWindow.g.cs
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\App.g.cs
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp_MarkupCompile.cache
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp_MarkupCompile.lref
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\MVVM\View\MainWindow.baml
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp.g.resources
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp.Properties.Resources.resources
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatClient.csproj.CoreCompileInputs.cache
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp.exe
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\ChatApp.pdb
+C:\Users\User\Facultate\AN2-Sem II\MVP\ChatApp\ChatApp\obj\Debug\GeneratedInternalTypeHelper.g.cs

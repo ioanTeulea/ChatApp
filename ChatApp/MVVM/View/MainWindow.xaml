@@ -1,0 +1,75 @@
+﻿<Window x:Class="ChatApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatApp"
+        xmlns:viewmodel="clr-namespace:ChatApp.MVVM.ViewModel"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="#36393F"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
+        Title="MainWindow" Height="650" Width="1200">
+    <Window.DataContext>
+        <viewmodel:MainViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="Gray">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.ColumnSpan="2" Background="#252525">
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="ChatApp" Foreground="Gray" FontWeight="SemiBold"></Label>
+           
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button Width="20" Height="20" Content="❌" Background="Gray" Style="{x:Null}" Command="{Binding CloseApplicationCommand}"></Button>
+            </StackPanel>
+            </Grid>
+        </Border>
+        <DockPanel Grid.Column="0" Grid.Row="1" Background="#36393F">
+            <TextBox   Height="30"  Margin="0,25,0,0"  DockPanel.Dock="Top" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"  Background="#36393F"/>
+            <Button  Height="30" Margin="0,25,0,0" DockPanel.Dock="Top" Content="Connect" Command="{Binding ConnectToServerCommand}"  />
+            <ListView Height="380" ItemsSource="{Binding Users}" Background="Transparent" Padding="0" BorderThickness="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Username}" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </DockPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Background="#36393F">
+            <ListView Height="500" Margin="0,25,0,0" ItemsSource="{Binding Messages}" Background="#36393F" FontFamily="Segoe UI">
+
+            </ListView>
+            <StackPanel Orientation="Horizontal" Background="#36393F" >
+                <TextBox FontSize="16" FontFamily="Segoe UI" Height="100" Width="800" VerticalContentAlignment="Center" Text="{Binding Message,UpdateSourceTrigger=PropertyChanged}" Background="#36393F"></TextBox>
+                <Button  Width="150" Height="75" Content="Send" Command="{Binding SendMessageCommand}"  ></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
